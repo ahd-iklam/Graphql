@@ -4,10 +4,6 @@
         background: linear-gradient(to right, #1f1c2c, #928dab);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: start;
         height: 100vh;
         overflow-y: auto;
     }
@@ -24,26 +20,21 @@
     .titrePage span {
         color: #00ffd9;
     }
+.exit {
+    text-align: right;
+    margin: 10px;
+}
 
-    /* #allContent {
-        background-color: rgba(0, 0, 0, 0.4);
-        padding: 30px;
-        margin-top: 40px;
-        border-radius: 20px;
-        width: 100%;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    } */
-
-    .container1 
+    .container1 ,.graphs
         {
     display: grid
 ;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    margin-top: 30px;
+    margin: 30px auto;
+    width:80%;
+    justify-content:center;
+    align-items:center
 }
     
 
@@ -94,9 +85,9 @@
         text-align: center;
     }
 
-    .infoUser {
+    .infoUser, .transactionInfo {
         margin: 10px 0;
-        padding: 10px;
+        padding: 17px;
         background-color: rgba(255, 255, 255, 0.05);
         border-radius: 10px;
         font-size: 1em;
@@ -121,11 +112,37 @@
     ::placeholder {
         color: #888;
     }
-.loginForm {
+   .loginForm {
     margin: 30px;
     padding: 15px;
+    width: 40%;
+    margin: auto;
+
 }
 #xpProgress {
   width: 100% !important; /* Make the parent container fill available width */
   height: auto !important; /* Set to auto to maintain aspect ratio */
+}
+
+@media only screen and (max-width: 600px) {
+     .container1 ,.graphs
+        {
+    display: block;
+    width:90%;
+    transform: scale(0.7);
+    margin: 10px auto;
+}
+#auditRatio  {
+transform: scale(0.7);
+    text-align: center;
+}
+}
+
+/* For tablet devices (portrait) */
+@media only screen and (max-width: 768px) {
+  .container1 ,.graphs
+        {
+    display: block;
+    width:90%;
+}
 }
